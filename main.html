@@ -1,21 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo Classes Example</title>
+  <style>
+    :root {
+      --page-background-color: rgb(135, 206, 235);
+    }
+
+    body {
+      background-color: var(--page-background-color);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    p:first-child {
+      color: white;
+      background-color: black;
+      padding: 10px;
+    }
+
+    p:nth-child(2) {
+      color: black; /* Standard text color */
+      padding: 10px;
+    }
+
+    p:last-child {
+      color: red;
+      padding: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      width: 50%;
+      padding: 10px;
+      background-color: gray;
+    }
+
+    li:nth-child(odd) {
+      background-color: white;
+    }
+
+    li:first-child,
+    li:last-child {
+      font-size: 22px;
+    }
+
+    li:nth-last-child(3) {
+      background-color: pink;
+    }
+  </style>
 </head>
 <body>
+
   <article>
-    <p>First paragraph: White text on a black background.</p>
-    <p>Second paragraph: Standard text color.</p>
-    <p>Third paragraph: Red text.</p>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
   </article>
 
   <ul>
-    <li>List item 1</li>
-    <li>List item 2</li>
-    <li>List item 3</li>
-    <li>List item 4</li>
-    <li>List item 5</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
   </ul>
+
 </body>
 </html>
